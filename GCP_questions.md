@@ -220,4 +220,27 @@ Google Cloud Datastore (now Firestore in Datastore mode) is a powerful NoSQL dat
 
 ---
 
+Question 13
+
+You are choosing a NoSQL database to handle telemetry data submitted from millions of Internet-of-Things (IoT) devices. The volume of data is growing at 100 TB per year, and each data entry has about 100 attributes. The data processing pipeline does not require atomicity, consistency, isolation, and durability (ACID).
+However, high availability and low latency are required.
+You need to analyze the data by querying against individual fields.
+
+Which three databases meet your requirements? (Choose three.)
+Redis
+HBase
+MySQL
+MongoDB
+Cassandra
+F. HDFS with Hive
+
+Answer is HBase, D. MongoDB, E. Cassandra
+
+A. Redis - Redis is an in-memory non-relational key-value store. Redis is a great choice for implementing a highly available in-memory cache to decrease data access latency, increase throughput, and ease the load off your relational or NoSQL database and application. Since the question does not ask cache, A is discarded.
+B. HBase - Meets reqs
+C. MySQL - they do not need ACID, so not needed.
+D. MongoDB - Meets reqs
+E. Cassandra - Apache Cassandra is an open source NoSQL distributed database trusted by thousands of companies for scalability and high availability without compromising performance. Linear scalability and proven fault-tolerance on commodity hardware or cloud infrastructure make it the perfect platform for mission-critical data.
+F. HDFS with Hive - Hive allows users to read, write, and manage petabytes of data using SQL. Hive is built on top of Apache Hadoop, which is an open-source framework used to efficiently store and process large datasets. As a result, Hive is closely integrated with Hadoop, and is designed to work quickly on petabytes of data. HIVE IS NOT A DATABSE.
+
 
