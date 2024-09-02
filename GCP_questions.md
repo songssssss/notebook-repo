@@ -133,3 +133,91 @@ Store the Data in a File in Google Cloud Storage and Use Cloud Dataflow to Query
 Complexity: Using Cloud Dataflow to combine data from Google Cloud Storage and BigQuery adds unnecessary complexity. Cloud Dataflow is more suitable for ETL and complex data transformations rather than just querying and combining datasets.
 Summary
 Storing and updating the data in a regional Google Cloud Storage bucket and creating a federated data source in BigQuery strikes the right balance between cost, ease of use, and performance. It allows you to keep your data up to date, leverage BigQuery’s powerful querying capabilities, and minimize costs associated with data storage and frequent updates.
+
+---
+Question 11
+
+You are designing the database schema for a machine learning-based food ordering service that will predict what users want to eat. Here is some of the information you need to store:
+- The user profile: What the user likes and doesn't like to eat
+- The user account information: Name, address, preferred meal times
+- The order information: When orders are made, from where, to whom
+
+The database will be used to store all the transactional data of the product. You want to optimize the data schema.
+
+Which Google Cloud Platform product should you use?
+BigQuery
+Cloud SQL
+Cloud Bigtable
+Cloud Datastore
+
+
+Answer is Cloud SQL
+
+The database will be used to store all the transactional data of the product. what we need is the database only for store transactional data, not for analysis and ML. so the answer should be "the database that stores transactional data", which means, Cloud SQL. if you want to analyze or do ML you just specify Cloud SQL as a federated data source.
+
+A: it's good for analysis but it costs too much to input/output data frequently.
+C: BigTable is not good for transactional data.
+D: okay datastore supports transactions, but it is weaker than RDB, and also, in this case, the data schema has already defined , you should use RDB.
+
+Google Cloud Datastore, now integrated into **Google Cloud Firestore** in Datastore mode, is a fully managed NoSQL document database designed for high-performance, scalable applications. It offers flexible, scalable, and reliable storage for applications that need to handle large amounts of data.
+
+Here’s a detailed overview of Google Datastore (and its current Firestore in Datastore mode):
+
+### Key Features of Google Cloud Datastore / Firestore in Datastore Mode
+
+1. **NoSQL Database:**
+   - **Schema-less**: Allows for flexible data modeling without requiring a fixed schema, making it easier to adapt to changes in your application’s data structure.
+   - **Document-Oriented**: Stores data as documents in collections, which can be nested.
+
+2. **Scalability:**
+   - **Automatic Scaling**: Handles large amounts of data and high request volumes without manual intervention. Google Cloud manages the underlying infrastructure to ensure that the database scales automatically.
+
+3. **High Performance:**
+   - **Indexing**: Automatically indexes data to support fast queries without the need for manual index management.
+   - **Low Latency**: Designed for high throughput and low-latency access, making it suitable for real-time applications.
+
+4. **ACID Transactions:**
+   - **Transaction Support**: Provides support for ACID transactions, allowing multiple operations to be executed atomically and consistently.
+
+5. **Global Distribution:**
+   - **Multi-Regional Replication**: Data is automatically replicated across multiple locations to ensure high availability and durability.
+
+6. **Flexible Querying:**
+   - **Powerful Queries**: Supports complex queries, including filters, range queries, and sorting. Queries are executed using indexed fields for efficiency.
+
+7. **Integration with Google Cloud Services:**
+   - **App Engine Integration**: Seamlessly integrates with Google App Engine for building scalable applications.
+   - **BigQuery Integration**: Can be integrated with BigQuery for advanced analytics on your data.
+
+8. **Security:**
+   - **IAM Integration**: Uses Google Cloud Identity and Access Management (IAM) to control access to Datastore resources.
+   - **Encryption**: Data is encrypted both in transit and at rest.
+
+9. **Cost-Effective:**
+   - **Pay-as-You-Go**: Charges based on usage, including the number of read/write operations and storage consumed.
+
+### Use Cases:
+
+- **Web and Mobile Applications**: Ideal for applications that require scalable and flexible data storage, such as user profiles, content management, and session data.
+- **Real-Time Analytics**: Suitable for applications that need to process and analyze large volumes of data in real-time.
+- **Gaming**: Often used for managing game state and player profiles in real-time multiplayer games.
+- **IoT Applications**: Handles data from a large number of devices and sensors efficiently.
+
+### Transition to Firestore:
+
+Google Cloud Datastore has been integrated into **Google Cloud Firestore**. Firestore provides all the features of Datastore with additional enhancements, including:
+
+- **Real-Time Updates**: Supports real-time data synchronization and offline capabilities.
+- **Enhanced Query Capabilities**: Offers more powerful querying and data structuring options.
+- **Hierarchical Data Model**: Supports a more flexible data model with nested collections.
+
+**Firestore in Datastore Mode** allows users to leverage existing Datastore applications while benefiting from Firestore’s enhancements and infrastructure.
+
+### Summary
+
+Google Cloud Datastore (now Firestore in Datastore mode) is a powerful NoSQL database service designed for scalability, flexibility, and performance. It is ideal for applications that require a schema-less, scalable, and high-performance data storage solution. The transition to Firestore brings additional features and improvements while maintaining compatibility with existing Datastore applications.
+
+
+---
+
+
