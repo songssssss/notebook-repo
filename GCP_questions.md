@@ -56,3 +56,15 @@ In summary, the choice of windowing concept depends on the data characteristics 
 - **Sliding Window**: For continuous, overlapping intervals with frequent updates.
 - **Session Window**: For grouping events based on activity and inactivity periods.
 
+---
+
+Question 6
+
+Your company is migrating their 30-node Apache Hadoop cluster to the cloud. They want to re-use Hadoop jobs they have already created and minimize the management of the cluster as much as possible. They also want to be able to persist data beyond the life of the cluster.
+
+What should you do?
+Create a Google Cloud Dataflow job to process the data.
+Create a Google Cloud Dataproc cluster that uses persistent disks for HDFS.
+Create a Hadoop cluster on Google Compute Engine that uses persistent disks.
+Create a Cloud Dataproc cluster that uses the Google Cloud Storage connector.
+Create a Hadoop cluster on Google Compute Engine that uses Local SSD disks.
