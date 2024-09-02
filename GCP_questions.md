@@ -1,3 +1,20 @@
+https://www.passnexam.com/google/professional-data-engineer/1
+
+Question 5
+
+You are designing a basket abandonment system for an ecommerce company. The system will send a message to a user based on these rules:
+• No interaction by the user on the site for 1 hour
+• Has added more than $30 worth of products to the basket
+• Has not completed a transaction
+
+You use Google Cloud Dataflow to process the data and decide if a message should be sent.
+
+How should you design the pipeline?
+Use a fixed-time window with a duration of 60 minutes.
+Use a sliding time window with a duration of 60 minutes.
+Use a session window with a gap time duration of 60 minutes.
+Use a global window with a time based trigger with a delay of 60 minutes.
+
 In data processing and streaming analytics, windowing concepts are crucial for handling and analyzing data in time-bound segments. These windows help in aggregating data over specific time periods and are used in various scenarios depending on the nature of the data and the requirements of the analysis. Here’s a breakdown of the three primary windowing concepts:
 
 ### 1. Fixed Window
